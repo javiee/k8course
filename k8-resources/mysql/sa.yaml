@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: mysql
+  namespace: default
+  labels:
+    app.kubernetes.io/name: mysql
+  annotations:
+secrets:
+  - name: mysql
