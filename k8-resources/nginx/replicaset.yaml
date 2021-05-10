@@ -6,7 +6,7 @@ metadata:
     app: web
     tier: frontend
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: web
@@ -17,5 +17,5 @@ spec:
         tier: frontend
     spec:
       containers:
-      - name: nginx
-        image: nginx
+      - name: nginx-frontend
+        image: public.ecr.aws/nginx/nginx:latest

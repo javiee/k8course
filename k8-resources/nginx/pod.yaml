@@ -2,11 +2,12 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: nginx-2
+  namespace: frontend
   labels:
     name: nginx
 spec:
   containers:
   - name: nginx
-    image: nginx
+    image: public.ecr.aws/nginx/nginx:latest
     ports:
-    - containerPort: 443
+    - containerPort: 80

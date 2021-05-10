@@ -19,3 +19,16 @@ spec:
         image: public.ecr.aws/nginx/nginx:1.18.0
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: config
+          mountPath: "/etc/nginx/nginx.conf"
+          subPath: nginx.conf
+          readOnly: true 
+      volumes:
+      - name: config
+        configMap:
+          name: nginx-config
+          items:
+            - key: nginx.conf
+              path: nginx.conf
+
