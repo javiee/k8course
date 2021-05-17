@@ -50,7 +50,11 @@ spec:
                   name: mysql
                   key: mysql-root-password
             - name: MYSQL_DATABASE
-              value: "my_database"
+              value: "java_app_database"
+            - name: MYSQL_USER
+              value: user1
+            - name: MYSQL_PASSWORD
+              value: password1
           ports:
             - name: mysql
               containerPort: 3306
@@ -110,5 +114,5 @@ spec:
           - "ReadWriteOnce"
         resources:
           requests:
-            storage: "8Gi"
+            storage: "1Gi"
 

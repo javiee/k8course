@@ -5,7 +5,7 @@ metadata:
   labels:
     app: java-app
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: java-app
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: spring-app
-        image: javiee/jcr:0.0.1
+        image: javiee/kubernetes-course:v3
         ports:
         - containerPort: 8080
