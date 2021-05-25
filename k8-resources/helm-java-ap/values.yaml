@@ -11,3 +11,8 @@ java:
       cpu: 20m
       memory: 256Mi
 
+service:
+  targetport: 8080
+
+hpa:
+  maxreplicas: 2

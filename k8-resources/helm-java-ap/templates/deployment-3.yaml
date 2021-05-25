@@ -36,4 +36,5 @@ spec:
       volumes:
       - name: config
         configMap:
-          name: java-app
+          name: { .Release.Name }}i-configmap
+

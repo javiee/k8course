@@ -8,5 +8,5 @@ spec:
     kind: Deployment
     name: java-app-deployment
   minReplicas: 1
-  maxReplicas: 3
+  maxReplicas: {{ .Values.hpa.maxreplicas }}
   targetCPUUtilizationPercentage: 10
