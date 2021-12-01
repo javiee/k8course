@@ -2,7 +2,6 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: nginx-2
-  namespace: frontend
   labels:
     name: nginx
 spec:
